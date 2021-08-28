@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { json } from 'express';
-import { userDTO } from 'src/DTO`s/user.dto';
+import { userDTO } from 'src/shared/DTO`s/user.dto';
 
-@Injectable()
+
+@Injectable() 
 export class UserService {
     userList = [
         {
@@ -33,8 +34,8 @@ export class UserService {
                 res = 'user not found';
 
         }
-        
         return res
+        
     }
 
     createUser(user: userDTO) {
